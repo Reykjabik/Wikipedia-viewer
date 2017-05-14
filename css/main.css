@@ -1,0 +1,42 @@
+@keyframes expand {
+  from {
+    width: 200px; }
+  to {
+    width: 30%; } }
+#wrapper {
+  margin: 0;
+  height: 100vh;
+  background-color: #f95959;
+  text-align: center;
+  display: flex;
+  flex-direction: column; }
+  #wrapper h2 {
+    margin: 0;
+    padding: 5%;
+    color: #e3e3e3;
+    font-family: "Inknut Antiqua", serif;
+    font-size: 4em; }
+  #wrapper p {
+    margin: 0;
+    padding: 20px;
+    color: #233142;
+    font-family: "Signika", sans-serif;
+    font-size: 1.25em; }
+  #wrapper input[type=text] {
+    width: 200px;
+    padding: 9px;
+    border-radius: 10px;
+    border: 3px solid #455d7a; }
+    #wrapper input[type=text]:focus {
+      width: 30%;
+      animation-name: expand;
+      animation-duration: 1.5s;
+      animation-timing-function: ease; }
+  #wrapper footer {
+    background-color: #455D7A;
+    flex: 1; }
+
+.search-area {
+  background-color: #455d7a; }
+
+/*# sourceMappingURL=main.css.map */

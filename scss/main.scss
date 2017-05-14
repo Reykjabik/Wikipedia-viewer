@@ -1,0 +1,72 @@
+$bg-color: #f95959;
+$p-font: 'Signika', sans-serif;
+$h2-font: 'Inknut Antiqua', serif;
+$h2-font-color: #e3e3e3;
+$p-font-color: #233142;
+
+@mixin nomargin {
+	margin: 0;
+}
+
+@keyframes expand {
+	from {width: 200px;}
+	to{width: 30%}
+}
+
+body {
+
+}
+
+#wrapper {
+	@include nomargin;
+	height: 100vh;
+	background-color: $bg-color;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+
+	h2{
+		@include nomargin;
+		padding: 5%;
+		color: $h2-font-color;
+
+		font: {
+			family: $h2-font;
+			size: 4em;
+		}	
+	}
+
+	p {
+		@include nomargin;
+		padding: 20px;
+		color: $p-font-color;
+
+		font: {
+			family: $p-font;
+			size: 1.25em;
+		}
+	}
+
+	input[type=text] {
+		width: 200px;
+		padding: 9px;
+		border-radius: 10px;
+		border: 3px solid #455d7a;
+
+		&:focus {
+			width: 30%;
+			animation-name: expand;
+			animation-duration: 1.5s;
+			animation-timing-function: ease;
+		}
+	}
+
+	footer {
+		background-color: #455D7A;
+		flex: 1;
+	}
+}
+
+.search-area {
+	background-color: #455d7a;
+}
