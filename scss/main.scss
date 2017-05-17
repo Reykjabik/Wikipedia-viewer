@@ -1,7 +1,8 @@
 $bg-color: #f95959;
+$main-blue-color: #455D7A;
 $p-font: 'Signika', sans-serif;
 $h2-font: 'Inknut Antiqua', serif;
-$h2-font-color: #e3e3e3;
+$h2-font-color: #fff;
 $p-font-color: #233142;
 
 @mixin nomargin {
@@ -13,8 +14,13 @@ $p-font-color: #233142;
 	to{width: 30%}
 }
 
-body {
+*{box-sizing: border-box;}
 
+a {
+	text-decoration: none;
+	&:visited {
+		color: $p-font-color;
+	}
 }
 
 #wrapper {
@@ -29,11 +35,28 @@ body {
 		@include nomargin;
 		padding: 5%;
 		color: $h2-font-color;
+		text-shadow: 5px 4px 5px black;
 
 		font: {
 			family: $h2-font;
 			size: 4em;
 		}	
+	}
+
+	#title>img {
+		margin-top: -90px;
+		margin-bottom: 20px;
+	}
+
+	#random {
+		border: 1px solid #e07d7d;
+		padding: 7px 11px;
+		border-radius: 25px;
+
+		&:hover{
+			color: #7ea656;
+			border: 2px solid $bg-color;
+		}
 	}
 
 	p {
@@ -51,7 +74,7 @@ body {
 		width: 200px;
 		padding: 9px;
 		border-radius: 10px;
-		border: 3px solid #455d7a;
+		border: 3px solid $main-blue-color;
 
 		&:focus {
 			width: 30%;
@@ -61,12 +84,62 @@ body {
 		}
 	}
 
+	ul {
+		padding: 10px 50px 10px 50px;
+		list-style: none;
+		width: 70%;
+		margin: 0 auto;
+
+		li {
+			display: flex;
+			margin: 10px;
+			text-align: left;
+			min-height: 90px;
+			height: auto;
+
+
+			
+			a {
+				width: 100%;
+				background-color: #fff;
+				border-radius: 5px;
+
+				&:hover {
+					border-left: 10px inset #457a62;
+				}
+
+				&:visited {
+					color: $p-font-color;
+				}
+
+				h4 {
+					margin: {
+						top: 15px;
+						left: 15px;
+					}
+				}
+				p {
+					margin-top: 0;
+					padding: {
+						top: 0;
+						left: 30px;
+					}
+				}
+			}
+		}
+	}
+
 	footer {
-		background-color: #455D7A;
+		background-color: $main-blue-color;
 		flex: 1;
 	}
 }
 
 .search-area {
-	background-color: #455d7a;
+	background-color: $main-blue-color;
+}
+
+#git, #twitter {
+	margin-left: 20px;
+	margin-bottom: -5px;
 }

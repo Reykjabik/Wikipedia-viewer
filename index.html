@@ -15,32 +15,50 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
+
     	<div id="wrapper">
+
         	<div id="title">
+
         		<h2>Wikipedia viewer</h2>
+                <img src="img/wiki.png" height="120px" />
+
         	</div>
         	<div class="search-area">
-        		<p>Press here to go to a random article</p>
+
+        		<p><a id="random" href="https://en.wikipedia.org/wiki/Special:Random">Press here to go to a random article</a>
+                </p>
+
         	</div>
         	<div class="search-area">
+
         		<form>
+
         			<input type="text" name="search" id="search" placeholder="What are you looking for?">
+
         		</form>
+
         	</div>
         	<div class="search-area">
+
         		<p>Type your query in the box above</p>
+
         	</div>
-        	<div id="results">
-        		
+        	<div class="search-area">          <!-- Div where query results will show up -->
+        		<ul id="results">
+                    
+                </ul>
+
         	</div>
         	<footer>
-        		<p>Coded by Javier</p>
+
+            	<p>Coded by <a href="https://reykjabik.github.io">Javier Espín</a><a href="https://github.com/Reykjabik" alt="GitHub Icon" target="_blank"><img id="git" src="img/github.png" height="30px"></a><a href="https://twitter.com/iamjesp?lang=es" alt="Twitter Icon" target="_blank"><img id="twitter" src="img/twitter.png" height="30px"></a></p>
+
         	</footer>
+
 		</div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
